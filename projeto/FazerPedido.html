@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
+    <!-- https://fontawesome.com/icons/bars?s=solid&f=classic -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="./main.css">
+    <script src="./main.js"></script>
+    <title>Fazer pedido</title>
+</head>
+
+<body>
+    <div class="columns">
+
+
+
+        <div class="column">
+            <div class="box">
+                <h1 class="title is-5">Fazer Pedido</h1>
+            </div>
+            <div class="box" >
+                <form id="form">
+                    <div class="field">
+                        <div class="columns">
+                            <div class="column is-11 is-offset-0">
+                                <label class="label">Peças para Lavar</label>
+                            </div>
+                        </div>
+                        <!-- Lista das Peças para Lavar -->
+                        <div class="pb-5" id="listaPeca">
+                            <div class="columns is-mobile" id="peca1">
+                                <div class="column is-8">
+                                    <div>
+                                        <label>Peça 1</label>
+                                    </div>
+                                    <div class="select is-fullwidth">
+                                        <select name="peca[peca1][id]">
+                                            <option value="1">Camiseta</option>
+                                            <option value="2">Camisa</option>
+                                            <option value="3">Calça</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="is-flex">
+                                    <button class="button is-danger is-inverted mt-auto mb-3" type="button" onclick="qtdePecaRoupa('-', 'peca1')">-</button>
+                                    <div class="m-auto">
+                                        <label>QTDE</label>
+                                        <input class="input" type="number" min="1" name="peca[peca1][qtde]" placeholder="XX" value="1"/>
+                                    </div>
+                                    <button class="button is-danger is-inverted mt-auto mb-3" type="button" onclick="qtdePecaRoupa('+', 'peca1')">+</button>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </form>
+                <div class="is-flex mt-5 pb-3">
+                    <div class="is-flex m-auto">
+                        <button class="button is-danger is-inverted has-background-light pl-6 pr-6 mr-3" type="button" onclick="addRemPecaRoupa('rem')">-</button>
+                        <button class="button is-danger is-inverted has-background-light pl-6 pr-6 ml-3" type="button" onclick="addRemPecaRoupa('add')">+</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="is-flex mb-5">
+                <div class="m-auto is-flex">
+                    <div class="has-text-success mt-auto mb-auto  mr-5">Preço Total:</div>
+                    <div class="mt-auto mb-auto mr-5">
+                        <input class="input" type="charset" placeholder="R$XX.XX" disabled/>
+                    </div>
+                    <div class="mt-auto mb-auto">Prazo da Lavagem: XX/XX/XXXX</div>
+                </div>
+            </div>
+            <div class="is-flex">
+                <div class="m-auto is-8">
+                    <button class="button is-danger is-rounded pl-6 pr-6 mr-6">Cancelar</button>
+                    <button class="button is-success is-rounded pl-6 pr-6 ml-6" form="form">Confirmar</button>
+                    <a href="PaginaInicial.html">Voltar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="main.css">
+    <script src="./main.js"></script>
+    <title>Consulta pedido</title>
+</head>
+<body>
+    <div class="columns">
+          <!-- Começo Menu -->
+    <div class="">
+      <div class="box sidebar-main" id="sidebar-main2">
+        <a onclick="openCloseSidebar()">
+          <i class="fa-solid fa-bars"></i>
+        </a>
+      </div>
+      <div class="sidebar-lol box" id="sidebar-lav">
+        <div class="columns is-mobile">
+          <div class="column is-10 ml-3">
+            <p class="title is-5">Principal</p>
+            <p class="subtitle">Menu Lateral</p>
+          </div>
+          <div class="column">
+            <i class="fa-solid fa-xmark" onclick="openCloseSidebar()"></i>
+          </div>
+        </div>
+        <a href="PaginaInicial.html">
+          <span class="icon is-small">
+            <i class="fa-sharp fa-solid fa-house"></i>
+          </span>
+          <span>Página Inicial</span>
+        </a>
+        <a href="login.html">
+          <span class="icon is-small">
+            <i class="fa-sharp fa-solid fa-right-to-bracket"></i>
+          </span>
+          <span>Login</span>
+        </a>
+        <a href="Cadastro.html">
+          <span class="icon is-small">
+            <i class="fa-sharp fa-solid fa-user-plus"></i>
+          </span>
+          <span>Cadastro</span>
+        </a>
+        <a href="FazerPedido.html">
+          <span class="icon is-small">
+            <i class="fa-sharp fa-solid fa-cart-shopping"></i>
+          </span>
+          <span>Realizar pedidos</span>
+        </a>
+        <a href="ManutencaoFun.html">
+          <span class="icon is-small">
+            <i class="fa-sharp fa-solid fa-building-columns"></i>
+          </span>
+          <span>Portal de Funcionários</span>
+        </a>
+        <a href="ManutencaoPeca.html">
+          <span class="icon is-small">
+            <i class="fa-solid fa-screwdriver-wrench"></i>
+          </span>
+          <span>Cadastrar peças</span>
+        </a>
+        <a href="gerarPDF.html">
+          <span class="icon is-small">
+            <i class="fa-sharp fa-solid fa-file-pdf"></i>
+          </span>
+          <span>Gerar Relatórios</span>
+        </a>
+      </div>
+    </div>
+    <!-- Fim Menu -->
+        <div class="column">
+          <div class="box" style="height: 748px;">
+            <p class="control has-icons-left">
+                <input class="input is-rounded" type="text" placeholder="Pesquisar">
+                <span class="icon is-small is-left">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </span>
+            </p>
+            <br><br><br>
+            <div class="dropdown is-hoverable" >
+                <div class="dropdown-trigger" >
+                  <button class="button" aria-haspopup="true" aria-controls="dropdown-menu4">
+                    <span>Pedido #0001 Status: <FONT FACE=Arial COLOR="#FFD700"><strong>ABERTO</strong></FONT></span>
+                    <span class="icon is-small is-left">
+                      <i class="fas fa-angle-down" aria-hidden="true"></i>
+                    </span>
+                  </button>
+                </div>
+                <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+                  <div class="dropdown-content">
+                    <div class="dropdown-item">
+                      <p>* INFORMAÇÕES PEDIDO</p>
+                    </div>
+                    <div class="dropdown-item">
+                      <button class="button is-responsive is-rounded is-danger is-small">Cancelar</button>
+                    </div>
+                  </div>
+                </div>
+              </div><br><br><br>
+              <div class="dropdown is-hoverable" >
+                <div class="dropdown-trigger" >
+                  <button class="button" aria-haspopup="true" aria-controls="dropdown-menu4">
+                    <span>Pedido #0002 Status: <FONT FACE=Arial COLOR="#00BFFF"><strong>AGUARDANDO PAGAMENTO</strong></FONT></span>
+                    <span class="icon is-small is-left">
+                      <i class="fas fa-angle-down" aria-hidden="true"></i>
+                    </span>
+                  </button>
+                </div>
+                <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+                  <div class="dropdown-content">
+                    <div class="dropdown-item">
+                      <p>PEÇA XXXXXXX QTDE: XX</p>
+                    </div>
+                    <div class="dropdown-item">
+                      <button class="button is-success is-rounded is-small">Pagar</button>
+                      <button class="button is-info is-rounded is-small">+</button>
+                    </div>
+                  </div>
+                </div>
+              </div><br><br><br>
+              <div class="dropdown is-hoverable" >
+                <div class="dropdown-trigger" >
+                  <button class="button" aria-haspopup="true" aria-controls="dropdown-menu4">
+                    <span>Pedido #0003 Status: <FONT FACE=Arial COLOR="#808080"><strong>RECOLHIDO</strong></FONT></span>
+                    <span class="icon is-small is-left">
+                      <i class="fas fa-angle-down" aria-hidden="true"></i>
+                    </span>
+                  </button>
+                </div>
+                <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+                  <div class="dropdown-content">
+                    <div class="dropdown-item">
+                      <p>* INFORMAÇÕES PEDIDO</p>
+                    </div>
+                    <div class="dropdown-item">
+                      <button class="button is-dark is-rounded is-small">Comprovante</button>
+                    </div>
+                  </div>
+                </div>
+              </div><br><br><br>
+              <div class="dropdown is-hoverable" >
+                <div class="dropdown-trigger" >
+                  <button class="button" aria-haspopup="true" aria-controls="dropdown-menu4">
+                    <span>Pedido #0004 Status: <FONT FACE=Arial COLOR="#FFD700"><STRONG>ABERTO</STRONG></FONT></span>
+                    <span class="icon is-small is-left">
+                      <i class="fas fa-angle-down" aria-hidden="true"></i>
+                    </span>
+                  </button>
+                </div>
+                <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+                  <div class="dropdown-content">
+                    <div class="dropdown-item">
+                      <p>* INFORMAÇÕES PEDIDO</p>
+                    </div>
+                  </div>
+                </div>
+              </div><br><br><br>
+              <div class="dropdown is-hoverable" >
+                <div class="dropdown-trigger" >
+                  <button class="button" aria-haspopup="true" aria-controls="dropdown-menu4">
+                    <span>Pedido #0005 Status: <FONT FACE=Arial COLOR="#00BFFF"><strong>AGUARDANDO PAGAMENTO</strong></FONT></span>
+                    <span class="icon is-small is-left">
+                      <i class="fas fa-angle-down" aria-hidden="true"></i>
+                    </span>
+                  </button>
+                </div>
+                <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+                  <div class="dropdown-content">
+                    <div class="dropdown-item">
+                      <p>* INFORMAÇÕES PEDIDO</p>
+                    </div>
+                  </div>
+                </div>
+              </div><br><br><br>
+          </div>
+          
+      </div>
+</body>
+</html>

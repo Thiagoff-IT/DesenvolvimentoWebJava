@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
+    <!-- https://fontawesome.com/icons/bars?s=solid&f=classic -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="./main.css">
+    <script src="./main.js"></script>
+    <title>Consulta pedido</title>
+</head>
+
+<body>
+    <div class="columns">
+
+
+
+        <div class="column">
+            <div class="box">
+                <p class="title is-5">Cadastrar/Editar - Peças de Roupa</p>
+            </div>
+            <div class="box mb-5 pb-6">
+                <form>
+                    <div class="field">
+                        <div class="columns">
+                            <div class="column is-11 is-offset-0">
+                                <h1 class="title is-5">Peça de Roupa</h1>
+                            </div>
+                            <button class="button is-danger is-rounded">Excluir</button>
+                        </div>
+                        <div class="columns">
+                            <div class="column">
+                                <label>Nome da Peça</label>
+                                <input class="input" type="charset" />
+                            </div>
+                        </div>
+                        <div class="columns">
+                            <div class="column is-8 is-offset-0">
+                                <label>Preço</label>
+                                <input class="input" type="number" placeholder="R$XX.XX" />
+                                <a href="PaginaInicial.html">Voltar</a>
+                            </div>
+                            <div class="is-flex">
+                                <button class="button is-danger is-inverted mt-auto mb-3" type="button" onclick="manPeca('-')">-</button>
+                                <div class="m-auto">
+                                    <label>Tempo de Lavagem (Em dias)</label>
+                                    <input class="input" type="number" min="1" placeholder="XX" value="1" id="manPecaId"/>
+                                </div>
+                                <button class="button is-danger is-inverted mt-auto mb-3" type="button" onclick="manPeca('+')">+</button>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="is-flex">
+                <button class="button is-success is-rounded pl-6 pr-6 m-auto" type="submit">Salvar</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

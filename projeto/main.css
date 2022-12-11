@@ -1,0 +1,54 @@
+
+.sidebar-main{
+    height: 95vh !important;
+}
+
+.sidebar-main a{
+    padding: auto;
+    margin-left: 0.7rem;
+    color: #0a0a0a !important;   
+}
+
+.sidebar-main a:hover{
+    color: hsl(171, 100%, 41%) !important;
+}
+
+.sidebar-lol{
+    display: none;
+    height: 100vh;
+}
+
+.sidebar-lol a{
+    color: #0a0a0a;
+    display: block;
+    margin: 1em;
+}
+
+.sidebar-lol a:hover{
+    color: hsl(171, 100%, 41%) !important;
+}
+
+.sidebar-lol .columns .column i:hover{
+    color: hsl(348, 100%, 61%) !important;
+}
+
+
+.dropdown-lol-oculto{
+    display: none;
+}
+
+.dropdown-lol{
+    display: block;
+}
+
+
+@media screen and (max-width: 768px) {
+    .sidebar-main{
+        height: auto;
+    }
+
+    .sidebar-lol{
+        position: absolute;
+        z-index: 5;
+    }
+}
