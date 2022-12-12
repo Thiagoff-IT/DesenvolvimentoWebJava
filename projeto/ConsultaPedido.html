@@ -11,47 +11,110 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
   <link rel="stylesheet" href="./main.css">
   <script src="./main.js"></script>
-  <title>Consulta pedido</title>
+  <title>Lavenderia LOL</title>
 </head>
 
 <body>
+    <nav class="navbar" role="navigation" aria-label="main navigation" style="height:84px">
+        <div class="navbar-brand">
+            <a href="PaginaInicial.html">
+                <img src="logo.png" width="200" height="100">
+            </a>
 
-  <div class="columns">
-
-
-
-    <div class="column">
-      <div class="box">
-        <p class="title is-5">Consulta de Pedido</p>
-        <p>ID XXXX</p>
-      </div>
-      <div class="box" style="height: 400px;">
-        <p class="title is-5">Menu</p>
-        <div class="content">
-          <ol>
-            <li class="mb-3">PEÇA XXXXXXXXX - QTDE XXXX</li>
-            <li class="mb-3">PEÇA XXXXXXXXX - QTDE XXXX</li>
-            <li class="mb-3">PEÇA XXXXXXXXX - QTDE XXXX</li>
-            <li class="mb-3">PEÇA XXXXXXXXX - QTDE XXXX</li>
-          </ol>
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
         </div>
-      </div>
-      <div class="is-flex mb-5">
-        <div class="m-auto is-flex">
-          <div class="has-text-success mt-auto mb-auto  mr-5">Preço Total:</div>
-          <div class="mt-auto mb-auto mr-5">
-            <input class="input" type="charset" placeholder="R$XX.XX" disabled />
-          </div>
-          <div class="mt-auto mb-auto">Prazo da Lavagem: XX/XX/XXXX</div>
+
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item" href="PaginaInicial.html">
+                    Pagina Inicial
+                </a>
+
+                <a class="navbar-item" href="FazerPedido.html">
+                    Fazer pedido
+                </a>
+
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link">
+                        Mais
+                    </a>
+
+                    <div class="navbar-dropdown">
+                        <a class="navbar-item" href="ManutencaoFun.html">
+                            Portal de Funcionários
+                        </a>
+                        <a class="navbar-item" href="ManutencaoPeca.html">
+                            Cadastrar peças
+                        </a>
+                        <a class="navbar-item" href="gerarPDF.html">
+                            Gerar Relatórios
+                        </a>
+                        <a class="navbar-item" href="ConsultaPedido.html">
+                            Consulta Pedido
+                        </a>
+                        <hr class="navbar-divider">
+                        <a class="navbar-item">
+                            Fale conosco
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="buttons">
+                        <a class="button is-primary" href="Cadastro.html">
+                            <strong>Cadastro</strong>
+                        </a>
+                        <a class="button is-light" href="login.html">
+                            Login
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="is-flex">
-        <div class="m-auto is-8">
-          <button class="button is-warning is-rounded pl-6 pr-6 mr-6">Cancelar</button>
+    </nav>
+
+    <div class="columns">
+
+
+
+        <div class="column">
+            <div class="box">
+                <p class="title is-5">Consulta de Pedido</p>
+                <p>ID XXXX</p>
+            </div>
+            <div class="box" style="height: 400px;">
+                <p class="title is-5">Menu</p>
+                <div class="content">
+                    <ol>
+                        <li class="mb-3">PEÇA XXXXXXXXX - QTDE XXXX</li>
+                        <li class="mb-3">PEÇA XXXXXXXXX - QTDE XXXX</li>
+                        <li class="mb-3">PEÇA XXXXXXXXX - QTDE XXXX</li>
+                        <li class="mb-3">PEÇA XXXXXXXXX - QTDE XXXX</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="is-flex mb-5">
+                <div class="m-auto is-flex">
+                    <div class="has-text-success mt-auto mb-auto  mr-5">Preço Total:</div>
+                    <div class="mt-auto mb-auto mr-5">
+                        <input class="input" type="charset" placeholder="R$XX.XX" disabled />
+                    </div>
+                    <div class="mt-auto mb-auto">Prazo da Lavagem: XX/XX/XXXX</div>
+                </div>
+            </div>
+            <div class="is-flex">
+                <div class="m-auto is-8">
+                    <button class="button is-warning is-rounded pl-6 pr-6 mr-6">Cancelar</button>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 </body>
 
 </html>

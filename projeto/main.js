@@ -35,6 +35,9 @@ function addRemPecaRoupa(acao){
         let num = lista.childElementCount + 1;
         clone.id = "peca" + num;
 
+        clone.childNodes[1].childNodes[1].childNodes[1].textContent = 
+            lista.childNodes[1].childNodes[1].childNodes[1].childNodes[1].textContent.replace(1,num);
+
         let idpeca = clone.childNodes[1].childNodes[3].childNodes[1];
         let qtdepeca = clone.childNodes[3].childNodes[3].childNodes[3];
         

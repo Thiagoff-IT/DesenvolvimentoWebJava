@@ -10,10 +10,73 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <link rel="stylesheet" href="./main.css">
     <script src="./main.js"></script>
-    <title>Consulta pedido</title>
+    <title>Lavenderia LOL</title>
 </head>
 
 <body>
+    <nav class="navbar" role="navigation" aria-label="main navigation" style="height:84px">
+        <div class="navbar-brand">
+            <a href="PaginaInicial.html">
+                <img src="logo.png" width="200" height="100">
+            </a>
+
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item" href="PaginaInicial.html">
+                    Pagina Inicial
+                </a>
+
+                <a class="navbar-item" href="FazerPedido.html">
+                    Fazer pedido
+                </a>
+
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link">
+                        Mais
+                    </a>
+
+                    <div class="navbar-dropdown">
+                        <a class="navbar-item" href="ManutencaoFun.html">
+                            Portal de Funcionários
+                        </a>
+                        <a class="navbar-item" href="ManutencaoPeca.html">
+                            Cadastrar peças
+                        </a>
+                        <a class="navbar-item" href="gerarPDF.html">
+                            Gerar Relatórios
+                        </a>
+                        <a class="navbar-item" href="ConsultaPedido.html">
+                            Consulta Pedido
+                        </a>
+                        <hr class="navbar-divider">
+                        <a class="navbar-item">
+                            Fale conosco
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="buttons">
+                        <a class="button is-primary" href="Cadastro.html">
+                            <strong>Cadastro</strong>
+                        </a>
+                        <a class="button is-light" href="login.html">
+                            Login
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
     <div class="columns">
 
 
@@ -41,18 +104,17 @@
                             <div class="column is-8 is-offset-0">
                                 <label>Preço</label>
                                 <input class="input" type="number" placeholder="R$XX.XX" />
-                                <a href="PaginaInicial.html">Voltar</a>
                             </div>
                             <div class="is-flex">
                                 <button class="button is-danger is-inverted mt-auto mb-3" type="button" onclick="manPeca('-')">-</button>
                                 <div class="m-auto">
                                     <label>Tempo de Lavagem (Em dias)</label>
-                                    <input class="input" type="number" min="1" placeholder="XX" value="1" id="manPecaId"/>
+                                    <input class="input" type="number" min="1" placeholder="XX" value="1" id="manPecaId" />
                                 </div>
                                 <button class="button is-danger is-inverted mt-auto mb-3" type="button" onclick="manPeca('+')">+</button>
-                                
                             </div>
                         </div>
+                        <a href="PaginaInicial.html">Voltar</a>
                     </div>
                 </form>
             </div>

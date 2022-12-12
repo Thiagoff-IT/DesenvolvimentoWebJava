@@ -11,158 +11,116 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
   <link rel="stylesheet" href="./main.css">
   <script src="./main.js"></script>
-  <title>Consulta pedido</title>
+  <title>Lavenderia LOL</title>
 </head>
 
 <body>
 
-  <div class="columns">
+    <nav class="navbar" role="navigation" aria-label="main navigation" style="height:84px">
+        <div class="navbar-brand">
+            <a href="PaginaInicial.html">
+                <img src="logo.png" width="200" height="100">
+            </a>
 
-    <!-- Começo Menu -->
-    <div class="">
-      <div class="box sidebar-main" id="sidebar-main2">
-        <a onclick="openCloseSidebar()">
-          <i class="fa-solid fa-bars"></i>
-        </a>
-      </div>
-      <div class="sidebar-lol box" id="sidebar-lav">
-        <div class="columns is-mobile">
-          <div class="column is-10 ml-3">
-            <p class="title is-5">Principal</p>
-            <p class="subtitle">Menu Lateral</p>
-          </div>
-          <div class="column">
-            <i class="fa-solid fa-xmark" onclick="openCloseSidebar()"></i>
-          </div>
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
         </div>
-        <a href="PaginaInicial.html">
-          <span class="icon is-small">
-            <i class="fa-sharp fa-solid fa-house"></i>
-          </span>
-          <span>Página Inicial</span>
-        </a>
-        <a href="login.html">
-          <span class="icon is-small">
-            <i class="fa-sharp fa-solid fa-right-to-bracket"></i>
-          </span>
-          <span>Login</span>
-        </a>
-        <a href="Cadastro.html">
-          <span class="icon is-small">
-            <i class="fa-sharp fa-solid fa-paperclip"></i>
-          </span>
-          <span>Cadastro</span>
-        </a>
-        <a href="FazerPedido.html">
-          <span class="icon">
-            <i class="fa-sharp fa-solid fa-bags-shopping"></i>
-          </span>
-          <span>Realizar pedidos</span>
-        </a>
-        <a href="ManutencaoFun.html">
-          <span class="icon is-small">
-            <i class="fa-sharp fa-solid fa-building-columns"></i>
-          </span>
-          <span>Portal de Funcionários</span>
-        </a>
-        <a href="ManutencaoPeca.html">
-          <span class="icon is-small">
-            <i class="fa-solid fa-screwdriver-wrench"></i>
-          </span>
-          <span>Cadastrar peças</span>
-        </a>
-        <a href="gerarPDF.html">
-          <span class="icon is-small">
-            <i class="fa-sharp fa-solid fa-file-pdf"></i>
-          </span>
-          <span>Gerar Relatórios</span>
-        </a>
-      </div>
+
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item" href="PaginaInicial.html">
+                    Pagina Inicial
+                </a>
+
+                <a class="navbar-item" href="FazerPedido.html">
+                    Fazer pedido
+                </a>
+
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link">
+                        Mais
+                    </a>
+
+                    <div class="navbar-dropdown">
+                        <a class="navbar-item" href="ManutencaoFun.html">
+                            Portal de Funcionários
+                        </a>
+                        <a class="navbar-item" href="ManutencaoPeca.html">
+                            Cadastrar peças
+                        </a>
+                        <a class="navbar-item" href="gerarPDF.html">
+                            Gerar Relatórios
+                        </a>
+                        <a class="navbar-item" href="ConsultaPedido.html">
+                            Consulta Pedido
+                        </a>
+                        <hr class="navbar-divider">
+                        <a class="navbar-item">
+                            Fale conosco
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="buttons">
+                        <a class="button is-primary" href="Cadastro.html">
+                            <strong>Cadastro</strong>
+                        </a>
+                        <a class="button is-light" href="login.html">
+                            Login
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+        <div class="column">
+            <div class="box">
+                <p class="title is-5">Funcionários</p>
+            </div>
+            <div class="box">
+
+                <!-- inicio do Campo de Busca -->
+                <div class="field">
+                    <div class="control has-icons-left">
+                        <input class="input" type="text" placeholder="Procurar">
+                        <input type="submit" hidden />
+                        <span class="icon is-small is-left">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </span>
+                    </div>
+                </div>
+                <!-- fim do Campo de Busca -->
+                <!-- Comeco lista funcionario-->
+                <div class="content">
+                    <div class="columns is-flex is-vcentered has-background-light m-2">
+                        <div class="column is-10">
+                            <p>Nome Do Funcionário - Email - Data de Nascimento: XX/XX/XXXX</p>
+                        </div>
+                        <div class="column">
+                            <a class="button is-warning is-rounded is-centered" href="">Editar</a>
+                        </div>
+                    </div>
+                    <div class="columns is-flex is-vcentered has-background-light m-2">
+                        <div class="column is-10">
+                            <p>Nome Do Funcionário - Email - Data de Nascimento: XX/XX/XXXX</p>
+                        </div>
+                        <div class="column">
+                            <a class="button is-warning is-rounded is-centered" href="">Editar</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Fim lista Funcionario -->
+            </div>
+        </div>
     </div>
-    <!-- Fim Menu -->
-
-    <div class="column">
-      <div class="box">
-        <p class="title is-5">Funcionários</p>
-      </div>
-      <div class="box">
-
-        <!-- inicio do Campo de Busca -->
-        <div class="field">
-          <div class="control has-icons-left">
-            <input class="input" type="text" placeholder="Procurar">
-            <input type="submit" hidden />
-            <span class="icon is-small is-left">
-              <i class="fa-solid fa-magnifying-glass"></i>
-            </span>
-          </div>
-        </div>
-        <!-- fim do Campo de Busca -->
-
-        <!-- Comeco lista funcionario-->
-        <div class="content">
-          <div class="columns is-flex is-vcentered has-background-light m-2">
-            <div class="column is-10">
-              <p>Nome Do Funcionário - Email - Data de Nascimento: XX/XX/XXXX</p>
-            </div>
-            <div class="column">
-              <a class="button is-warning is-rounded is-centered" href="">Editar</a>
-            </div>
-          </div>
-          <div class="columns is-flex is-vcentered has-background-light m-2">
-            <div class="column is-10">
-              <p>Nome Do Funcionário - Email - Data de Nascimento: XX/XX/XXXX</p>
-            </div>
-            <div class="column">
-              <a class="button is-warning is-rounded is-centered" href="">Editar</a>
-            </div>
-          </div>
-        </div>
-        <!-- Fim lista Funcionario -->
-
-        <!-- Começo dropdown -->
-        <div class="has-background-light m-2 dropdown-lol is-mobile" id="drop1" onclick="openDrop('drop1')" >
-          <!-- Cabecalho-->
-          <div class="columns is-mobile">
-            <div class="column ml-4 is-narrow">
-              <i class="fa-sharp fa-solid fa-chevron-up"></i>
-            </div>
-            <div class="column is-4">
-              <p class="has-text-weight-bold">Pedido #000XX</p>
-            </div>
-            <div class="column is-4 is-offset-3 is-flex">
-              <p class="is-Success">Status: </p>
-              <p class="has-text-danger has-text-weight-bold">Pago</p>
-            </div>
-          </div>
-          <!-- Fim Cabecalho -->
-          <div class="dropdown-lol-oculto" >
-            <div class="content m-3">
-              <ol class="p-3">
-                <li class="mb-3">PEÇA XXXXXXXXX - QTDE XXXX</li>
-                <li class="mb-3">PEÇA XXXXXXXXX - QTDE XXXX</li>
-                <li class="mb-3">PEÇA XXXXXXXXX - QTDE XXXX</li>
-              </ol>
-            </div>
-            <div class="columns">
-              <div class="column is-5 ml-5 is-flex ">
-                <p class="has-text-weight-bold">Previsão de Termino:</p>
-                <p class="ml-2">3 Dias</p>
-              </div>
-              <div class="column is-5 is-offset-2 is-flex">
-                <button class="button is-danger is-rounded is-centered ml-2">+</button>
-                <button class="button is-success is-rounded is-centered ml-4">Finalizar</button>
-              </div>
-            </div>
-          </div>
-
-        </div>
-        <!-- fim dropdown -->
-
-      </div>
-
-    </div>
-  </div>
 </body>
 
 </html>
